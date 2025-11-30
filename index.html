@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Thunder Passeios — Início</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">JJ</div>
+      <div>
+        <div class="brand-title">JJ Passeios</div>
+        <div class="small">Aventura e conforto</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="passeios-a.html">Passeios</a>
+      <a href="reserva.html">Reserva</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button id="langToggle" class="btn">EN</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="kicker">Vivencie o melhor do litoral</div>
+        <h1>Passeios de lancha, quadriciclo, buggy, 4x4 e catamarã</h1>
+        <p class="small">Roteiros para todos os gostos — banho em piscinas naturais, trilhas nas dunas, pôr do sol inesquecível.</p>
+        <div style="margin-top:12px" class="badges">
+          <div class="badge">Seguro</div>
+          <div class="badge">Guias experientes</div>
+          <div class="badge">Fotos inclusas</div>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:8px">
+          <a class="btn" href="passeios-a.html">Ver passeios</a>
+          <a class="btn secondary" href="galeria.html">Galeria</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Reservas rápidas</h3>
+          <p class="small">Selecione passeios, preencha nomes e horários e finalize pelo WhatsApp.</p>
+          <div style="margin-top:10px" id="cart"><div class="summary"><strong>Escolha um passeio</strong></div></div>
+        </div>
+
+        <div style="margin-top:14px" class="card">
+          <h3>Contato</h3>
+          <p class="small">WhatsApp: (insira número no script)</p>
+          <p class="small">Atendimento: 8h — 18h</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:18px">
+      <h2>Principais passeios</h2>
+      <div id="list-home" class="grid" style="margin-top:12px">
+        <!-- mostramos cards das três primeiras -->
+        <div class="card">
+          <img src="https://picsum.photos/id/1018/800/600" alt="">
+          <h3>Passeio de Lancha</h3>
+          <p class="small">1h30 com paradas para banho.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+            <div><strong>R$ 70,00</strong></div>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="passeios-a.html">Ver</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/id/1003/800/600" alt="">
+          <h3>Quadriciclo</h3>
+          <p class="small">2 horas de trilhas e aventura.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+            <div><strong>R$ 240,00</strong></div>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="passeios-a.html">Ver</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/id/1060/800/600" alt="">
+          <h3>Catamarã</h3>
+          <p class="small">2h30 com música e banho.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+            <div><strong>R$ 65,00</strong></div>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="passeios-b.html">Ver</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © Thunder Passeios — Todos os direitos reservados.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

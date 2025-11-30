@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Reserva — JJ Passeios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo">T</div><div><div class="brand-title">JJ Passeios</div></div></div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="passeios-a.html">Passeios</a>
+      <a href="reserva.html">Reserva</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button id="langToggle" class="btn">EN</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Reserva</h1>
+    <p class="small">Revise seu(s) passeio(s) e finalize pelo WhatsApp.</p>
+
+    <section style="margin-top:12px;display:grid;grid-template-columns:1fr 380px;gap:18px">
+      <div>
+        <div id="cart"></div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Informações do contato</h3>
+          <label>Telefone/Contato</label>
+          <input class="input" id="contactPhone" placeholder="(xx) 9xxxx-xxxx" />
+          <label style="margin-top:8px">Observações</label>
+          <textarea class="input" id="obs" rows="4" placeholder="Informações adicionais"></textarea>
+          <div style="margin-top:10px">
+            <button class="btn" onclick="finalize()">Enviar para o WhatsApp</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">© Thunder Passeios</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

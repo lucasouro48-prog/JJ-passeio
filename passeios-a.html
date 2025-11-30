@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Passeios — Parte 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="header">
+  <div class="brand">
+      <div class="logo">JJ</div>
+      <div><div class="brand-title">JJ Passeios</div></div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" data-i18n="inicio">Início</a>
+    <a href="galeria.html" data-i18n="galeria">Galeria</a>
+    <a href="passeios-a.html" data-i18n="passeios">Passeios</a>
+    <a href="reserva.html" data-i18n="reserva">Reserva</a>
+  </nav>
+
+  <button id="langToggle" class="btn">EN</button>
+</header>
+
+<main class="container">
+  <h1 data-i18n="Passeios">Passeios — Página 2</h1>
+  <p class="small" data-i18n="localizados em pipa/RN">Catamarã, Buggy e 4x4 — escolha e adicione à reserva.</p>
+
+<section class="passeios-container">
+
+  <!-- LANCHA -->
+  <div class="card">
+      <img src="img/lancha1.jpg" alt="Passeio de Lancha">
+      <h3 data-i18n="lancha">Passeio de Lancha</h3>
+      <p data-i18n="lancha_desc">1h30 de passeio com paradas para banho.</p>
+      <span class="valor" data-i18n="lancha_preco">R$ 70,00 por pessoa</span>
+      <button class="btn-card" onclick="selecionarPasseio('Lancha',70)" data-i18n="reservar">Reservar</button>
+  </div>
+
+  <!-- QUADRICICLO -->
+  <div class="card">
+      <img src="img/quadri1.jpg" alt="Passeio de Quadriciclo">
+      <h3 data-i18n="quadri">Quadriciclo</h3>
+      <p data-i18n="quadri_desc">2h de trilha com mirantes incríveis.</p>
+      <span class="valor" data-i18n="quadri_preco">R$ 240,00 por máquina</span>
+      <button class="btn-card" onclick="selecionarPasseio('Quadriciclo',240)" data-i18n="reservar">Reservar</button>
+  </div>
+
+  <!-- BUGGY -->
+  <div class="card">
+      <img src="img/buggy1.jpg" alt="Passeio de Buggy">
+      <h3>Buggy</h3>
+      <p data-i18n="buggy_desc">Dunas, lagoas e mirantes.</p>
+      <span class="valor" data-i18n="buggy_preco">Consultar no WhatsApp</span>
+      <button class="btn-card consultar" onclick="whatsapp()" data-i18n="consultar">Consultar</button>
+  </div>
+
+  <!-- CATAMARÃ -->
+  <div class="card">
+      <img src="img/catamara1.jpg" alt="Catamarã">
+      <h3>Catamarã</h3>
+      <p data-i18n="cat_desc">2h30 de passeio pela costa.</p>
+      <span class="valor" data-i18n="cat_preco">R$ 65,00 por pessoa</span>
+      <button class="btn-card" onclick="selecionarPasseio('Catamarã',65)" data-i18n="reservar">Reservar</button>
+  </div>
+
+  <!-- 4x4 -->
+  <div class="card">
+      <img src="img/4x4.jpg" alt="Passeio 4x4">
+      <h3>4x4</h3>
+      <p data-i18n="4x4_desc">Expedição off-road completa.</p>
+      <span class="valor" data-i18n="4x4_preco">Consultar no WhatsApp</span>
+      <button class="btn-card consultar" onclick="whatsapp()" data-i18n="consultar">Consultar</button>
+  </div>
+
+</section>
+</main>
+
+<script src="script.js">/* ---------------- RESERVA / CARRINHO -------------------- */
+
+// cria array salvo no navegador
+if(!localStorage.getItem("reservas")){
+    localStorage.setItem("reservas", JSON.stringify([]));
+}
+
+// adicionar passeio ao carrinho
+function selecionarPasseio(nome, preco){
+    let reservas = JSON.parse(localStorage.getItem("reservas"));
+    reservas.push({ passeio:nome, valor:preco });
+    localStorage.setItem("reservas", JSON.stringify(reservas));
+    alert(`${nome} adicionado à reserva!`);
+    window.location.href = "reserva.html"; // vai para página de reserva
+}
+
+// redireciona para zap ao consultar
+function whatsapp(){
+    window.open("https://wa.me/5588999999999", "_blank");
+}
+</script>
+</body>
+</html>
